@@ -1,26 +1,31 @@
 
 import React from 'react'
-import {Container, Grid, Box, Typography} from '@material-ui/core'
+import {Grid, Box, Typography} from '@material-ui/core'
 import styles from './Welcome.style';
 import MobileQRCode from './components/MobileQRCode/MobileQRCode';
+import SelfServTrademark from './components/SelfServTrademark/SelfServTrademark';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import SCOTheme from '../SCOTheme';
+
+const theme = createMuiTheme(SCOTheme);
 
 const WelcomeScreen = () => {
     const classes = styles();
     
     return (
-        <Container id='WelcomeScreen' maxWidth='xl'>
-            <Grid container alignContent='space-between' className='full-height'>
-                <Grid item container>
+        <ThemeProvider theme={theme}>
+            <Grid id='WelcomeScreen' container alignContent='space-between' className={classes.component}>
+                <Grid item container className={classes.header}>
                     <Grid item>
-                        <Box id="SelfServTradeMark">SelfServ™ Checkout</Box>
+                        <SelfServTrademark />
                     </Grid>
                 </Grid>
-                <Grid id='WelcomeContent' item container justify='center'>
+                <Grid id='WelcomeContent' item container justify='center' className={classes.content}>
                     <Grid item xs='12'>
-                        <Typography variant='h1' align='center'>Welcome!</Typography>
+                        <Typography variant='h1' align='center' color='primary' >Welcome!</Typography>
                     </Grid>
                     <Grid item xs='12'>
-                        <Typography display='block' align='center' className={classes.subtitle}>Scan your items, or touch "Start" to begin</Typography>
+                        <Typography display='block' align='center' color='primary' className={classes.subtitle}>Scan your items, or touch "Start" to begin</Typography>
                     </Grid>
                     <Grid item xs='8'>
                         <Box id='WelcomeOptions' mt='10.28vh'>
@@ -40,7 +45,7 @@ const WelcomeScreen = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid item container direction='row-reverse' alignItems='center'> 
+                <Grid item container direction='row-reverse' alignItems='center' className={classes.footer} > 
                     <Grid item xs container justify='flex-end'>
                         <Grid item> 
                             <MobileQRCode />
@@ -51,7 +56,7 @@ const WelcomeScreen = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Container>
+        </ThemeProvider>
     )
 }
 

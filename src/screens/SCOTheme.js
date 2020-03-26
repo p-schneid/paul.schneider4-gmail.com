@@ -7,6 +7,7 @@ const SCOTheme = {
       },
       secondary: {
         main: '#A5CE39',
+        contrast: '#51AF46' // MUI Theme extension
       },
   },
   typography: {
@@ -21,7 +22,7 @@ const SCOTheme = {
         fontSize: '3.75rem',
         lineHeight: '5.125rem',
       },
-  } 
+  }, 
 }
 
 export default SCOTheme;

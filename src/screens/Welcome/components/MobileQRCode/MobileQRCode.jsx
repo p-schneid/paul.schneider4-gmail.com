@@ -8,7 +8,7 @@ const MobileQRCode = () => {
 
     const classes = styles();
     return (
-        <Box id='MobileQRCode' className={classes.mobileQRCode}>
+        <Box id='MobileQRCode' className={classes.component}>
             <Grid container direction='row'>
                 <Grid item xs={6}>
                     <Typography className={classes.label}>Scan this code to complete your Mobile Shopping</Typography>
