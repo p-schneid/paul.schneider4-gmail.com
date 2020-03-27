@@ -1,5 +1,7 @@
 
-const SCOTheme = {
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
+
+const theme = {
   spacing: 10, 
   palette: {
       primary: {
@@ -15,14 +17,14 @@ const SCOTheme = {
       h1: {
           fontWeight: 'bold',
           fontSize: '6.5rem',
-          lineHeight: '8.5rem',
       },
       h2: {
         fontWeight: '600',
         fontSize: '3.75rem',
-        lineHeight: '5.125rem',
       },
   }, 
 }
+
+const SCOTheme = responsiveFontSizes(createMuiTheme(theme));
 
 export default SCOTheme;

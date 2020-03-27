@@ -4,16 +4,15 @@ import {Grid, Box, Typography} from '@material-ui/core'
 import styles from './Welcome.style';
 import MobileQRCode from './components/MobileQRCode/MobileQRCode';
 import SelfServTrademark from './components/SelfServTrademark/SelfServTrademark';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
 import SCOTheme from '../SCOTheme';
 
-const theme = createMuiTheme(SCOTheme);
 
 const WelcomeScreen = () => {
     const classes = styles();
     
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={SCOTheme}>
             <Grid id='WelcomeScreen' container alignContent='space-between' className={classes.component}>
                 <Grid item container className={classes.header}>
                     <Grid item>
@@ -22,18 +21,18 @@ const WelcomeScreen = () => {
                 </Grid>
                 <Grid id='WelcomeContent' item container justify='center' className={classes.content}>
                     <Grid item xs='12'>
-                        <Typography variant='h1' align='center' color='primary' >Welcome!</Typography>
+                        <Typography variant='h1' align='center' color='primary'>Welcome!</Typography>
                     </Grid>
                     <Grid item xs='12'>
                         <Typography display='block' align='center' color='primary' className={classes.subtitle}>Scan your items, or touch "Start" to begin</Typography>
                     </Grid>
-                    <Grid item xs='8'>
+                    <Grid item xs='10' md='8'>
                         <Box id='WelcomeOptions' mt='10.28vh'>
                             <Grid container direction='row' spacing={1}>
                                 <Grid item xs='5'>
                                     <Box id='WelcomeStart' className={`${classes.startButton} ${classes.welcomeButton}`}> &nbsp;</Box>
                                 </Grid>
-                                <Grid item xs='7' container direction='column' spacing={1}>
+                                <Grid item xs='7' container direction='column' justify='space-between' spacing={1}>
                                     <Grid item>
                                         <Box id='WelcomeUseBag' className={classes.welcomeButton}>&nbsp;</Box>
                                     </Grid>

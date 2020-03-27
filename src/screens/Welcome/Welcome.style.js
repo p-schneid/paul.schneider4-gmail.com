@@ -1,45 +1,63 @@
 
 
 import { makeStyles } from '@material-ui/styles';
-import SCOTheme from '../SCOTheme';
+import theme from '../SCOTheme';
+import WideBackground from '../grocery-bg-16x9.png';
+import NarrowBackground from '../grocery-bg-9x16.png';
 
-const screenPadding = `${SCOTheme.spacing}px`;
-const screenHorizontalPadding = `0 ${screenPadding}`;
-const screenVerticalPadding = `${screenPadding} 0`;
+const screenPadding = `${theme.spacing(1)}px`;
 
 const styles = makeStyles({
     component: {
         height: '100vh',
-        padding: screenVerticalPadding,
-        color: SCOTheme.palette.primary.main
+        padding: `${screenPadding} 0`,
+        color: theme.palette.primary.main,
+        backgroundSize: 'cover',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: `url(${NarrowBackground})`,
+        },
+        [theme.breakpoints.up('lg')]: {
+            backgroundImage: `url(${WideBackground})`,
+        }
     },
     header: {
-        padding: screenHorizontalPadding
+        padding: `0 ${screenPadding}`
     },
     content: {
-        padding: screenHorizontalPadding
+        padding: `0 ${screenPadding}`
     }, 
     footer: {
-        padding: screenHorizontalPadding
+        padding: `0 ${screenPadding}`
     },
     subtitle: {
-        fontWeight: 'normal',
-        fontSize: '2.5rem',
-        lineHeight: '3.375rem',
+        fontSize: '1.75rem',
+        fontWeight: '600',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '2.5rem',
+        },
     },
     welcomeButton: {
-        height: '16.20vh',
-        backgroundColor: SCOTheme.palette.primary.main,
+        height: '6.56vh',
+        //marginBottom: '2.22vh',
+        backgroundColor: theme.palette.primary.main,
         color: 'white',
-        fontSize: '2.5rem'
+        fontSize: '2.5rem',
+        [theme.breakpoints.up('sm')]: {
+            height: '16.20vh'
+        }
     },
     startButton: {
-        height: '34.72vh'
+        height: '14.37vh',
+        [theme.breakpoints.up('sm')]: {
+            height: '35vh;',
+        }
+        //marginRight: '1.67vw',
     },
     systemControls: {
         width: '100%',
-        height: 60,
-        backgroundColor: SCOTheme.palette.secondary.main,
+        height: 67,
+        backgroundColor: theme.palette.secondary.main,
+        marginTop: 10
     }
 
 });
