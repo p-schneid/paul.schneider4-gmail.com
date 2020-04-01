@@ -13,7 +13,7 @@ const styles = makeStyles({
         padding: `${screenPadding} 0`,
         color: theme.palette.primary.main,
         backgroundSize: 'cover',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             backgroundImage: `url(${NarrowBackground})`,
         },
         [theme.breakpoints.up('lg')]: {
@@ -38,7 +38,6 @@ const styles = makeStyles({
     },
     welcomeButton: {
         height: '6.56vh',
-        //marginBottom: '2.22vh',
         backgroundColor: theme.palette.primary.main,
         color: 'white',
         fontSize: '2.5rem',
@@ -51,7 +50,6 @@ const styles = makeStyles({
         [theme.breakpoints.up('sm')]: {
             height: '35vh;',
         }
-        //marginRight: '1.67vw',
     },
     systemControls: {
         width: '100%',

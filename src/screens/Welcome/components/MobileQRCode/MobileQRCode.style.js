@@ -7,8 +7,7 @@ const styles = makeStyles({
     component: {
         width: 228,
         height:  82,
-        backgroundColor: 'rgba(255,255,255,0.5)',
-        backgroundColor: 'pink',
+        backgroundColor: 'white',
         padding: 5,
         [theme.breakpoints.up('sm')]: {
             width: 273,

@@ -1,14 +1,45 @@
+
+
 html {
-    font-size: 11.37777px;
+
 }
 
 body {
     margin: 0;
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family:  "Roboto", "Helvetica", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 6.25rem;
+    font-weight: bold;
+    font-style: bold;
+}
+
+h2 {
+    font-size: 3.75rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h5 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 2.5rem;
+    font-weight: normal;
 }
 
   

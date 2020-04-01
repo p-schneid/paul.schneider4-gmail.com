@@ -13,14 +13,14 @@ const theme = {
       },
   },
   typography: {
-      fontFamily: ['Open Sans'],
+      fontFamily: ['Roboto'],
       h1: {
           fontWeight: 'bold',
-          fontSize: '6.5rem',
+          fontSize: '4.43rem',
       },
       h2: {
-        fontWeight: '600',
-        fontSize: '3.75rem',
+        fontWeight: '500',
+        fontSize: '2.66rem',
       },
   }, 
 }

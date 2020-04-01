@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import Welcome from './screens/Welcome/Welcome'
+import Welcome from './screens/Welcome/Welcome';
+import TypographyTest from './screens/TypographyTest/TypographyTest';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-      <Welcome />
+      <TypographyTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
